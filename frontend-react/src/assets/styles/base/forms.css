@@ -1,0 +1,29 @@
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--clr-text);
+    outline-offset: 2px;
+}
+
+/* Legacy starter buttons — replace when component styles are introduced */
+button {
+    padding: .5em .8em;
+    border: 0;
+    margin: .5em;
+    cursor: pointer;
+    background-color: var(--clr1);
+    color: whitesmoke;
+}
+
+button:hover {
+    transition: 0.3s;
+    background-color: var(--clr1-light);
+}
