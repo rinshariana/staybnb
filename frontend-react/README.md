@@ -70,7 +70,7 @@ dispatch(loadCars())
 ## 🎯 Services
 
 ### REST API Services
-- `car.service` - Car CRUD operations
+- `stay.service` - Stay CRUD operations
 - `user.service` - Authentication & user management
 - `review.service` - Review system
 - `upload.service` - File uploads
