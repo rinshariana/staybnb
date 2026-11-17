@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export function CarFilter({ filterBy, setFilterBy }) {
+export function StayFilter({ filterBy, setFilterBy }) {
     const [ filterToEdit, setFilterToEdit ] = useState(structuredClone(filterBy))
 
     useEffect(() => {
@@ -26,14 +26,14 @@ export function CarFilter({ filterBy, setFilterBy }) {
     }
 
     function clearFilter() {
-        setFilterToEdit({ ...filterToEdit, txt: '', minSpeed: '', maxPrice: '' })
+        setFilterToEdit({ ...filterToEdit, txt: '', maxPrice: '', maxPrice: '' })
     }
     
     function clearSort() {
         setFilterToEdit({ ...filterToEdit, sortField: '', sortDir: '' })
     }
 
-    return <section className="car-filter">
+    return <section className="stay-filter">
             <h3>Filter:</h3>
             <input
                 type="text"
@@ -46,9 +46,9 @@ export function CarFilter({ filterBy, setFilterBy }) {
             <input
                 type="number"
                 min="0"
-                name="minSpeed"
-                value={filterToEdit.minSpeed}
-                placeholder="min. speed"
+                name="maxPrice"
+                value={filterToEdit.maxPrice}
+                placeholder="max. price"
                 onChange={handleChange}
                 required
             />
@@ -62,8 +62,8 @@ export function CarFilter({ filterBy, setFilterBy }) {
                     <input
                         type="radio"
                         name="sortField"
-                        value="speed"
-                        checked={filterToEdit.sortField === 'speed'}
+                        value="price"
+                        checked={filterToEdit.sortField === 'price'}
                         onChange={handleChange}
                     />
                 </label>
@@ -72,8 +72,8 @@ export function CarFilter({ filterBy, setFilterBy }) {
                     <input
                         type="radio"
                         name="sortField"
-                        value="vendor"
-                        checked={filterToEdit.sortField === 'vendor'}            
+                        value="name"
+                        checked={filterToEdit.sortField === 'txt'}            
                         onChange={handleChange}
                     />
                 </label>

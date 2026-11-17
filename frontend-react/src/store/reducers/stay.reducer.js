@@ -32,7 +32,7 @@ export function stayReducer(state = initialState, action) {
             stays = state.stays.map(stay => (stay._id === action.stay._id) ? action.stay : stay)
             newState = { ...state, stays }
             break
-        case ADD_STAY_MSG:
+        case ADD_STAY_REVIEW:
             if (action.review && state.stay) {
                 newState = { ...state, stay: { ...state.stay, reviews: [...state.stay.reviews || [], action.review] } }
                 break

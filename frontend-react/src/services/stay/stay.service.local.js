@@ -133,5 +133,5 @@ async function _createStays() {
         ],
         likedByUsers: ['mini-user'],
 }]
-    utilService.saveToStorage(STORAGE_KEY, cars)
+    utilService.saveToStorage(STORAGE_KEY, stays)
 }

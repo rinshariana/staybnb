@@ -12,10 +12,10 @@
 @import url('./components/AboutUs.css');
 @import url('./components/AppFooter.css');
 @import url('./components/AppHeader.css');
-@import url('./components/car/CarFilter.css');
-@import url('./components/car/CarIndex.css');
-@import url('./components/car/CarList.css');
-@import url('./components/car/CarPreview.css');
+@import url('./components/stay/StayFilter.css');
+@import url('./components/stay/StayIndex.css');
+@import url('./components/stay/StayList.css');
+@import url('./components/stay/StayPreview.css');
 @import url('./components/Chat.css');
 @import url('./components/HomePage.css');
 @import url('./components/LoginSignup.css');
