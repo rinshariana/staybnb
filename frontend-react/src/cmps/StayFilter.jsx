@@ -58,7 +58,7 @@ export function StayFilter({ filterBy, setFilterBy }) {
             <h3>Sort:</h3>
             <div className="sort-field">
                 <label>
-                    <span>Speed</span>
+                    <span>Price</span>
                     <input
                         type="radio"
                         name="sortField"
@@ -68,7 +68,7 @@ export function StayFilter({ filterBy, setFilterBy }) {
                     />
                 </label>
                 <label>
-                    <span>Vendor</span>
+                    <span>Name</span>
                     <input
                         type="radio"
                         name="sortField"
