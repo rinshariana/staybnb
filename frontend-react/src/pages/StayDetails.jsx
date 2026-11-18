@@ -9,34 +9,47 @@ import { loadStay, addStayReview } from '../store/actions/stay.actions'
 
 export function StayDetails() {
 
-  const {stayId} = useParams()
+  const { stayId } = useParams()
   const stay = useSelector(storeState => storeState.stayModule.stay)
 
   useEffect(() => {
     loadStay(stayId)
   }, [stayId])
 
-  async function addStayReview(stayId) {
+  async function onAddStayReview(stayId) {
     try {
-        await addStayReview(stayId, 'bla bla ' + parseInt(Math.random()*10))
-        showSuccessMsg(`Stay review added`)
+      await addStayReview(stayId, 'bla bla ' + parseInt(Math.random() * 10))
+      showSuccessMsg(`Stay review added`)
     } catch (err) {
-        showErrorMsg('Cannot add stay review')
-    }        
+      showErrorMsg('Cannot add stay review')
+    }
 
-}
+  }
 
   return (
     <section className="stay-details">
       <Link to="/stay">Back to list</Link>
-      <h1>Stay Details</h1>
+
       {stay && <div>
-        <h3>{stay.vendor}</h3>
-        <h4>{stay.speed} KMH</h4>
-        <pre> {JSON.stringify(stay, null, 2)} </pre>
+        <header className="stay-details-header">
+          <h1>{stay.name}</h1>
+        </header>
+
+        <section className="stay-overview">
+          <h2>
+            {stay.type} in {stay.loc.city}, {stay.loc.country}
+          </h2>
+
+          <p>{stay.capacity} guests</p>
+        </section>
+
+        <pre>{JSON.stringify(stay, null, 2)}</pre>
+
+        <button onClick={() => { onAddStayReview(stay._id) }}>
+          Add stay review
+        </button>
       </div>
       }
-      <button onClick={() => { onAddStayReview(stay._id) }}>Add stay review</button>
 
     </section>
   )
