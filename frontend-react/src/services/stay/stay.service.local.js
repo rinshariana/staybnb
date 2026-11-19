@@ -1,6 +1,6 @@
 
 import { storageService } from '../async-storage.service'
-import { makeId } from '../util.service'
+import { makeId, saveToStorage } from '../util.service'
 import { userService } from '../user'
 
 const STORAGE_KEY = 'stay'
@@ -133,5 +133,5 @@ async function _createStays() {
         ],
         likedByUsers: ['mini-user'],
 }]
-    utilService.saveToStorage(STORAGE_KEY, stays)
+   saveToStorage(STORAGE_KEY, stays)
 }
