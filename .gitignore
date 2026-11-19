@@ -6,3 +6,6 @@
 
 # Operating system files
 .DS_Store
+
+/output
+docs/airbnb-header-icons.md
